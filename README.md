@@ -68,13 +68,13 @@ Add additional notes about how to deploy this on a live system
 
 ## Contributing
 
-Feel free to dive in! [Open an issue](https://github.com/hopla-cloud/mariadb-dump-backup/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/hopla-cloud/openstack-workload-stress-test/issues/new) or submit PRs.
 
 Hopla.cloud projects follows the [Contributor Covenant](http://contributor-covenant.org/version/1/3/0/) Code of Conduct.
 
 ### Contributors
 
-You can find the projects contributors [here](https://github.com/hopla-cloud/mariadb-dump-backup/graphs/contributors).
+You can find the projects contributors [here](https://github.com/hopla-cloud/openstack-workload-stress-test/graphs/contributors).
 
 ## License
 
