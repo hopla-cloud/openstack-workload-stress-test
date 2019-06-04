@@ -20,7 +20,7 @@ StandardOutput=journal
 WantedBy=multi-user.target
 EOF
 
-curl https://gitlab.com/jskandera/hopla.cloud-stress-pub/raw/master/stress.sh --output /usr/sbin/stress.sh
+curl https://raw.githubusercontent.com/hopla-cloud/openstack-workload-stress-test/master/scripts/stress.sh --output /usr/sbin/stress.sh
 chmod 755 /usr/sbin/stress.sh
 # Only for lab
 echo "172.25.0.9 s3-fr-lab-1.lab.hopla.cloud" >> /etc/hosts
