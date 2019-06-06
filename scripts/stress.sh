@@ -19,19 +19,19 @@ fi
 function stress_io_r {
 	size=$1\G
 	sync
-	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randread --output-format=json --output=output-io-r.json
+	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randread --output-format=json | jq '.time,.jobs[0]."job options".rw,.jobs[0].read,.jobs[0].write' > output-io-r.json
 }
 # FIO write
 function stress_io_w {
 	size=$1\G
 	sync
-	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randwrite --output-format=json --output=output-io-w.json
+	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randwrite --output-format=json | jq '.time,.jobs[0]."job options".rw,.jobs[0].read,.jobs[0].write' > output-io-w.json
 }
 # FIO read-write
 function stress_io_rw {
 	size=$1\G
 	sync
-	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randrw --rwmixread=75 --output-format=json --output=output-io-rw.json
+	fio --randrepeat=1 --ioengine=libaio --direct=1 --gtod_reduce=1 --name=test --filename=test --bs=4k --iodepth=64 --size=$size --readwrite=randrw --rwmixread=75 --output-format=json | jq '.time,.jobs[0]."job options".rw,.jobs[0].read,.jobs[0].write' > output-io-rw.json
 }
 
 ### Stress CPU ###
